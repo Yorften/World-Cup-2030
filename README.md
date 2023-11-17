@@ -8,4 +8,4 @@
   https://trello.com/b/rUSBsWgm/mondial-2030
 
 # Presentation
-  https://www.canva.com/design/DAF0dXEPlAU/0esOap1HzM3GjXcUAgTIvA/edit
+  https://www.canva.com/design/DAF0dXEPlAU/0esOap1HzM3GjXcUAgTIvA/edit?utm_content=DAF0dXEPlAU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
