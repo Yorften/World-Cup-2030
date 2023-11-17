@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "./index.php",
-    "./getCountryInfo.php",
+    "./getContent.php",
+    "src/pages/getCountryInfo.php",
     "src/pages/footer.html",
     "src/pages/header.html",
   ],
