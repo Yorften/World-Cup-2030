@@ -1,0 +1,111 @@
+CREATE DATABASE worldcup2030;
+USE worldcup2030;
+
+CREATE TABLE Stades (
+    stadeId INT AUTO_INCREMENT PRIMARY KEY,
+    stadeName VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Groups (
+    groupId INT AUTO_INCREMENT PRIMARY KEY,
+    groupName CHAR NOT NULL,
+    stadeId INT NOT NULL,
+    CONSTRAINT FK_Stade FOREIGN KEY (stadeId) REFERENCES Stades(stadeId)
+);
+
+CREATE TABLE Countries (
+    countryId INT AUTO_INCREMENT PRIMARY KEY,
+    countryName VARCHAR(50) NOT NULL,
+    countryImage VARCHAR(100) NOT NULL,
+    countryContinent VARCHAR(50) NOT NULL,
+    countryCapital VARCHAR(50) NOT NULL,
+    countryPopulation VARCHAR(50) NOT NULL,
+    groupId INT NOT NULL,
+    CONSTRAINT FK_Group FOREIGN KEY (groupId) REFERENCES groups(groupId)
+);
+
+CREATE TABLE Players (
+    playerId INT AUTO_INCREMENT PRIMARY KEY,
+    playerName VARCHAR(50) NOT NULL,
+    playerSurename VARCHAR(50) NOT NULL,
+    playerAge INT NOT NULL,
+    playerImage VARCHAR(100) NOT NULL,
+    countryId INT NOT NULL,
+    CONSTRAINT FK_Country FOREIGN KEY (countryId) REFERENCES Countries(countryId)
+);
+
+
+INSERT INTO stades (stadeName) VALUES 
+('Stade Mohammed V'),('Moulay Abdellah'),('Stade Adrar Agadir'),('Stade de Marrakech'),
+('Stade Ibn Batouta'),('Complexe sportif de Fès'),('Honneur Stadium'),('Stade de Safi');
+
+INSERT INTO groups (groupName, stadeId) VALUES 
+('A',1),('B',2),('C',3),('D',4),('E',5),('F',6),('G',7),('H',8);
+
+INSERT INTO players (playerName, playerSurename, playerImage) VALUES
+('cody', 'gakpo', 'src/images/players/1.png'),
+('kalidou', 'koulibaly', 'src/images/players/2.png'),
+('mohammed', 'muntari', 'src/images/players/3.png'),
+('enner', 'valencia', 'src/images/players/4.png'),
+('marcus', 'rashford', 'src/images/players/5.png'),
+('christian', 'pulisic', 'src/images/players/6.png'),
+('mehdi', 'taremi', 'src/images/players/7.png'),
+('gareth', 'bale', 'src/images/players/8.png'),
+('lionel', 'messi', 'src/images/players/9.png'),
+('salem', 'aldawsadri', 'src/images/players/10.png'),
+('robert', 'lewandowski', 'src/images/players/11.png'),
+('henry', 'martin', 'src/images/players/12.png'),
+('kylian', 'mbappe', 'src/images/players/13.png'),
+('mathew', 'leckie', 'src/images/players/14.png'),
+('wahbi', 'khazri', 'src/images/players/15.png'),
+('andreas', 'christensen', 'src/images/players/16.png'),
+('ritsu', 'doan', 'src/images/players/17.png'),
+('alvaro', 'morata', 'src/images/players/18.png'),
+('niclas', 'fuellkrug', 'src/images/players/19.png'),
+('yeltsin', 'tejeda', 'src/images/players/20.png'),
+('hakim', 'ziyech', 'src/images/players/21.png'),
+('luka', 'modric', 'src/images/players/22.png'),
+('kevin', 'de bruyne', 'src/images/players/23.png'),
+('alphonso', 'davies', 'src/images/players/24.png'),
+('Richarlison', 'de Andrade', 'src/images/players/25.png'),
+('breel', 'embolo', 'src/images/players/26.png'),
+('vincent', 'aboubakar', 'src/images/players/27.png'),
+('aleksandar', 'mitrovic', 'src/images/players/28.png'),
+('cristiano', 'ronaldo', 'src/images/players/29.png'),
+('cho', 'guesung', 'src/images/players/30.png'),
+('kudus', 'mohammed', 'src/images/players/31.png'),
+('luis', 'suarez', 'src/images/players/32.png');
+
+INSERT INTO countries (countryName, countryImage, countryContinent, countryCapital, countryPopulation, groupId, playerId) VALUES 
+('Netherlands', 'src/images/countries/ntherlands.png', 'Europe', 'Amsterdam', '18m', 1, 1),
+('Senegal', 'src/images/countries/senegal.png', 'Africa', 'Dakar', '17m', 1, 2),
+('Quatar', 'src/images/countries/quatar.png', 'Asia', 'Doha', '3m', 1, 3),
+('Ecuador', 'src/images/countries/equador.png', 'South America', 'Quito', '18m', 1, 4),
+('England', 'src/images/countries/england.png', 'Europe', 'London', '56m', 2, 5),
+('USA', 'src/images/countries/usa.png', 'North America', 'Washington, D.C.', '330m', 2, 6),
+('Iran', 'src/images/countries/iran.png', 'Asia', 'Tehran', '85m', 2, 7),
+('Wales', 'src/images/countries/wales.png', 'Europe', 'Cardiff', '3m', 2, 8),
+('Argentina', 'src/images/countries/argentina.png', 'South America', 'Buenos Aires', '45m', 3, 9),
+('Saudi Arabia', 'src/images/countries/saudiarabia.png', 'Asia', 'Riyadh', '35m', 3, 10),
+('Poland', 'src/images/countries/poland.png', 'Europe', 'Warsaw', '38m', 3, 11),
+('Mexico', 'src/images/countries/mexico.png', 'South America', 'Mexico City', '130m', 3, 12),
+('France', 'src/images/countries/france.png', 'Europe', 'Paris', '67m', 4, 13),
+('Australia', 'src/images/countries/australia.png', 'Australia', 'Canberra', '26m', 4, 14),
+('Tunisia', 'src/images/countries/tunisia.png', 'Africa', 'Tunis', '12m', 4, 15),
+('Denmark', 'src/images/countries/denmark.png', 'Europe', 'Copenhagen', '6m', 4, 16),
+('Japan', 'src/images/countries/japan.png', 'Asia', 'Tokyo', '126m', 5, 17),
+('Spain', 'src/images/countries/spain.png', 'Europe', 'Madrid', '47m', 5, 18),
+('Germany', 'src/images/countries/germany.png', 'Europe', 'Berlin', '83m', 5, 19),
+('Costa Rica', 'src/images/countries/costarica.png', 'North America', 'San José', '5m', 5, 20),
+('Morocco', 'src/images/countries/morocco.png', 'Africa', 'Rabat', '38m', 6, 21),
+('Croatia', 'src/images/countries/croatia.png', 'Europe', 'Zagreb', '4m', 6, 22),
+('Benlgium', 'src/images/countries/belgium.png', 'Europe', 'Brussels', '12m', 6, 23),
+('Canada', 'src/images/countries/canada.png', 'North America', 'Ottawa', '38m', 6, 24),
+('Brazil', 'src/images/countries/brazil.png', 'South America', 'Brasília', '213m', 7, 25),
+('Suitzerland', 'src/images/countries/suitzerland.png', 'Europe', 'Bern', '9m', 7, 26),
+('Cameroon', 'src/images/countries/cameroon.png', 'Africa', 'Yaoundé', '27m', 7, 27),
+('Serbia', 'src/images/countries/serbia.png', 'Europe', 'Belgrade', '7m', 7, 28),
+('Portugal', 'src/images/countries/portugal.png', 'Europe', 'Lisbon', '10m', 8, 29),
+('Korea Republic', 'src/images/countries/korea.png', 'Asia', 'Seoul', '52m', 8, 30),
+('Ghana', 'src/images/countries/ghana.png', 'Africa', 'Accra', '31m', 8, 31),
+('Uruguay', 'src/images/countries/uruguay.png', 'South America', 'Montevideo', '4m', 8, 32);
