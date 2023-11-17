@@ -32,4 +32,3 @@ function print(pattern) {
     })
     .catch((error) => console.error("Error:", error));
 }
-

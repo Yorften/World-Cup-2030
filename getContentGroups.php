@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -11,7 +14,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT groups.groupId, groups.groupName, stades.stadeName
                      FROM groups
-                     INNER JOIN stades ON Groups.stadeId = Stades.stadeId";
+                     INNER JOIN stades ON groups.stadeId = stades.stadeId";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $resultGroup = $stmt->get_result();

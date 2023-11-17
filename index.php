@@ -66,7 +66,7 @@
     ?>
     <script>
         function print2() {
-            fetch("getContentGroups.php")
+            fetch('getContentGroups.php')
                 .then((response) => response.text())
                 .then((data) => {
                     document.getElementById("groups").innerHTML = data;
