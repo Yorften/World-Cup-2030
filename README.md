@@ -1,11 +1,11 @@
 # FIFA World Cup 2030™
-  Le projet a pour ambition de créer un site web dédié à la Coupe du Monde 2030, offrant une expérience utilisateur optimale en mettant à disposition le calendrier   officiel des groupes, les détails des équipes participantes, et des fonctionnalités de filtrage pour une personnalisation de l'expérience.
+  Ce projet consiste à construire un site web pour une pépinière O'PEP en utilisant PHP, avec l'objectif de le rendre facile à utiliser pour tout le monde.
     
 # Project demo
   http://mondial2030.infinityfreeapp.com
 
 # Planification
-  https://trello.com/b/rUSBsWgm/mondial-2030
+  https://trello.com/b/CWJKYp1l/opep-v2
 
 # Presentation
-  https://www.canva.com/design/DAF0dXEPlAU/0esOap1HzM3GjXcUAgTIvA/edit?utm_content=DAF0dXEPlAU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+  https://www.canva.com/design/DAF2bbSEOUU/wxQQ5Fp33x9tW-k-WOGmzQ/edit
